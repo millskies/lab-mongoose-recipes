@@ -54,7 +54,10 @@ mongoose
   })
 
   .then(() => {
-    // return mongoose.connection.close();
+    return mongoose.connection.close();
+  })
+  .then(() => {
+    console.log('Connection succesfully closed')
   })
 
   .catch((error) => {
